@@ -36,10 +36,10 @@ public class Window extends javax.swing.JFrame {
         this.username = username;
     }
 
-    public void connect() {
+    public void connect(String ip, int port) {
         sc = null;
         try {
-            sc = new BattleShipClientController("localhost", 25500);
+            sc = new BattleShipClientController(ip, port);
         } catch (IOException ex) {
             Logger.getLogger(Window.class.getName()).log(Level.SEVERE, null, ex);
         }

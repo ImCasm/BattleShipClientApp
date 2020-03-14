@@ -19,6 +19,7 @@ public class MapSelect extends javax.swing.JFrame {
      */
     public MapSelect() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -41,30 +42,42 @@ public class MapSelect extends javax.swing.JFrame {
         btnRegister = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtIP = new javax.swing.JTextField();
+        txtPort = new javax.swing.JTextField();
+        jSeparator2 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonGroup1.add(rbtnMap1);
         rbtnMap1.setSelected(true);
         rbtnMap1.setText("Mapa 1");
+        jPanel1.add(rbtnMap1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
 
         buttonGroup1.add(rbtnMap2);
         rbtnMap2.setText("Mapa 2");
+        jPanel1.add(rbtnMap2, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 6, -1, -1));
 
         buttonGroup1.add(rbtnMap3);
         rbtnMap3.setText("Mapa 3");
+        jPanel1.add(rbtnMap3, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 6, -1, -1));
 
         buttonGroup1.add(rbtnMap4);
         rbtnMap4.setText("Mapa 4");
+        jPanel1.add(rbtnMap4, new org.netbeans.lib.awtextra.AbsoluteConstraints(243, 6, -1, -1));
 
         buttonGroup1.add(rbtnMap5);
         rbtnMap5.setText("Mapa 5");
+        jPanel1.add(rbtnMap5, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 6, -1, -1));
 
         txtUsername.setBackground(new java.awt.Color(255, 255, 255));
         txtUsername.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 220, -1));
 
         btnRegister.setBackground(new java.awt.Color(255, 255, 255));
         btnRegister.setForeground(new java.awt.Color(51, 51, 51));
@@ -74,67 +87,23 @@ public class MapSelect extends javax.swing.JFrame {
                 btnRegisterActionPerformed(evt);
             }
         });
+        jPanel1.add(btnRegister, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 220, -1, -1));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 134, 389, 10));
 
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("Ingresar nombre");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 156, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(rbtnMap5)
-                            .addComponent(rbtnMap4)
-                            .addComponent(rbtnMap3)
-                            .addComponent(rbtnMap2)
-                            .addComponent(rbtnMap1))
-                        .addGap(89, 89, 89))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(158, 158, 158))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jSeparator1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(163, 163, 163)
-                                .addComponent(btnRegister))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(64, 64, 64)
-                                .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 62, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(rbtnMap1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rbtnMap2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rbtnMap3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rbtnMap4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rbtnMap5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnRegister)
-                .addGap(19, 19, 19))
-        );
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setText("IP");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
+
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel3.setText("Puerto");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 96, -1, -1));
+        jPanel1.add(txtIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 56, 129, -1));
+        jPanel1.add(txtPort, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 92, 129, -1));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 40, 389, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,9 +113,7 @@ public class MapSelect extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE)
         );
 
         pack();
@@ -174,7 +141,7 @@ public class MapSelect extends javax.swing.JFrame {
             //creator = null;
             Window windowGame = new Window(map, user);
             windowGame.setVisible(true);
-            windowGame.connect();
+            windowGame.connect(txtIP.getText(),Integer.parseInt(txtPort.getText()));
         } else {
             JOptionPane.showMessageDialog(this, "Ingrese un nombre");
         }
@@ -219,13 +186,18 @@ public class MapSelect extends javax.swing.JFrame {
     private javax.swing.JButton btnRegister;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JRadioButton rbtnMap1;
     private javax.swing.JRadioButton rbtnMap2;
     private javax.swing.JRadioButton rbtnMap3;
     private javax.swing.JRadioButton rbtnMap4;
     private javax.swing.JRadioButton rbtnMap5;
+    private javax.swing.JTextField txtIP;
+    private javax.swing.JTextField txtPort;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }
