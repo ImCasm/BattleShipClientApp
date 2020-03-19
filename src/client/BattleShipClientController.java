@@ -42,11 +42,11 @@ public class BattleShipClientController extends SocketController implements Runn
     }
 
     public boolean isReadyToStart() {
-        return numShipsCreated == 5;
+        return numShipsCreated == 5 && numTowersCreated == 10;
     }
 
     public boolean createTower(int row, int column) {
-        if (numTowersCreated < 10 && myMap[row][column] == GROUND) {
+        if (numTowersCreated < 10 && myMap[row][column] == GROUND ) {
             myMap[row][column] = TOWER;
             numTowersCreated++;
             return true;
@@ -64,7 +64,6 @@ public class BattleShipClientController extends SocketController implements Runn
             if (createTower(row, column)) {
                 panelMyMap.repaint();
             }
-
         }
 
         int large;
@@ -133,8 +132,6 @@ public class BattleShipClientController extends SocketController implements Runn
         }
         return false;
     }
-    
-    
 
     private boolean attackVerification(int row, int column) {
         if (myMap[row][column] == SHIP || myMap[row][column] == TOWER) {
@@ -144,7 +141,7 @@ public class BattleShipClientController extends SocketController implements Runn
                 writeText("LOSER;Perdi");
                 JOptionPane.showMessageDialog(panelMyMap, "Perdiste :(");
             }
-            
+
             myTurn = false;
 
             return true;

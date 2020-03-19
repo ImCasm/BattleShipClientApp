@@ -48,7 +48,7 @@ public class MapSelect extends javax.swing.JFrame {
         txtPort = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,6 +142,7 @@ public class MapSelect extends javax.swing.JFrame {
             Window windowGame = new Window(map, user);
             windowGame.setVisible(true);
             windowGame.connect(txtIP.getText(),Integer.parseInt(txtPort.getText()));
+            this.dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Ingrese un nombre");
         }
